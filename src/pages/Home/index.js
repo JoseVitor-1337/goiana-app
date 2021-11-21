@@ -19,6 +19,9 @@ export default function Home() {
   }
 
   const handleBarCodeScanned = ({ type, data }) => {
+    console.log(`type`, type);
+    console.log(`data`, data);
+
     alert("Scanned");
 
     setScanned(true);
@@ -39,10 +42,13 @@ export default function Home() {
           <Text>Esperando a permissão de uso da câmera</Text>
         </View>
       ) : hasCameraPermssion === false ? (
-        <View>
-          <Text>Acesso a câmera negada</Text>
-          <TouchableOpacity onPress={askForCameraPermission}>
-            <Text>Permitir acesso</Text>
+        <View style={styles.deniedBox}>
+          <Text style={styles.deniedText}>Acesso a câmera negada</Text>
+          <TouchableOpacity
+            style={styles.deniedButton}
+            onPress={askForCameraPermission}
+          >
+            <Text style={styles.deniedButtonText}>Permitir acesso</Text>
           </TouchableOpacity>
         </View>
       ) : (

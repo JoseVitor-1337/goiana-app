@@ -7,6 +7,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  deniedBox: {
+    padding: 10,
+  },
+  deniedText: {
+    fontSize: 20,
+  },
+  deniedButton: {
+    marginTop: 15,
+    borderRadius: 20,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "tomato",
+  },
+  deniedButtonText: {
+    fontSize: 20,
+    color: "#FFF",
+  },
   barCode: {
     alignItems: "center",
     justifyContent: "center",
